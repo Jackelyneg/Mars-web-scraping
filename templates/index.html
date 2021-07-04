@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Mars</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1>Mission to Mars</h1>
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1><strong>Latest Mars News</strong></h1>
+                <h4><strong>{{ mars_data.news_title }}</strong></h4>
+                <p>{{ mars_data.news_article }}</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <hr>
+    <div class='container'>
+        <div class="row">
+            <div class="col-md-8">
+                <h1><strong>Featured Mars Image</strong></h1>
+                <img src='{{mars_data.featured_image_url}}' alt="NASA image">
+            </div>
+
+            <div class="col-md-4">
+                <h4><strong>Mars Facts</strong></h4>
+                <div>{{ mars_data.mars_table|safe }}</div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" style="text-align:left">
+        <div class="row">
+            <h1 style="position:relative; left:150px"><strong>Mars Hemispheres</strong></h1>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="row">
+            {%for hem in mars_data.hemisphere_image_urls%}
+            <div class="col-sm-3">
+
+                <div class="card" style="width: 18rem;">
+
+
+                    <img class="card-img-top" src='{{hem.image_url}}' alt='hemisphere image' width="250" height="250">
+                    <div class="card-body">
+                        <h4 class="card-text"><strong>{{hem.title}}</strong></h4>
+                    </div>
+                </div>
+
+
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
