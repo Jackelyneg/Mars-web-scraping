@@ -21,7 +21,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <h1><strong>Latest Mars News</strong></h1>
                 <h4><strong>{{ mars_data.news_title }}</strong></h4>
                 <p>{{ mars_data.news_article }}</p>
@@ -47,31 +47,37 @@
         </div>
     </div>
 
-    <div class="container" style="text-align:left">
-        <div class="row">
-            <h1 style="position:relative; left:150px"><strong>Mars Hemispheres</strong></h1>
-        </div>
-    </div>
-
-
-
     <div class="container">
         <div class="row">
-            {%for hem in mars_data.hemisphere_image_urls%}
-            <div class="col-sm-3">
 
-                <div class="card" style="width: 18rem;">
+            <h1 style="position:relative; left:150px"><strong>Mars Hemispheres</strong></h1>
+        </div>
 
 
-                    <img class="card-img-top" src='{{hem.image_url}}' alt='hemisphere image' width="250" height="250">
-                    <div class="card-body">
-                        <h4 class="card-text"><strong>{{hem.title}}</strong></h4>
+
+
+
+        <div class="container">
+            <div class="row">
+                {%for hem in mars_data.hemisphere_image_urls%}
+                <div class="col-sm-3">
+                    <div class="card border">
+
+                        <div class="card" style="width: 18rem;">
+
+
+                            <img class="card-img-top" src='{{hem.image_url}}' alt='hemisphere image' width="250"
+                                height="250">
+                            <div class="card-body">
+                                <h4 class="card-text"><strong>{{hem.title}}</strong></h4>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
-
-
+                {%endfor%}
             </div>
-            {%endfor%}
         </div>
     </div>
 
