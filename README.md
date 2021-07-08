@@ -1,8 +1,13 @@
+# Mission To Mars
+
+
+
+
 ![Mars Screenshot](https://github.com/Jackelyneg/web-scraping-challenge/blob/main/mars%20screenshot.PNG)
 
 
 
-# Technologies:
+### Technologies:
 - Python
 - Beautiful Soup
 - Splinter
@@ -12,18 +17,18 @@
 - HTML
 - CSS
 
-# Websites Used:
+### Websites Used:
 - [Click Here for Mars News Site](https://redplanetscience.com/)
 - [Click Here for Mars Featured Image](https://spaceimages-mars.com/)
 - [Click Here for Mars Facts](https://galaxyfacts-mars.com/)
 
-# web-scraping-challenge
+### web-scraping-challenge
 - Scrape the Mars News Site and collect the latest News Title and Paragraph Text. 
 - Use splinter to navigate the site and find the image url for the current Featured Mars Image 
 - Visit the Mars Facts webpage here and use Pandas to scrape the table containing facts about the planet including Diameter, Mass, etc.
 - Visit the astrogeology site here to obtain high resolution images for each of Mar's hemispheres.
 
-# Flask
+### Flask:
 Use MongoDB with Flask templating to create a new HTML page that displays all of the information that was scraped from the URLs above.
 
 Start by converting your Jupyter notebook into a Python script called scrape_mars.py with a function called scrape that will execute all of your scraping code from above and return one Python dictionary containing all of the scraped data.
