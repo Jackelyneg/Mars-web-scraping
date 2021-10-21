@@ -1,5 +1,6 @@
 # Mission To Mars
 
+## Summary
 A web application using Flask that scrapes the NASA website for data related to the "Mission to Mars" and displays the information in a single HTML page. This data is always up-to-date whenever you click the "refresh" button on the homepage.
 
 
