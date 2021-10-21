@@ -1,6 +1,6 @@
 # Mission To Mars
 
-
+A web application using Flask that scrapes the NASA website for data related to the "Mission to Mars" and displays the information in a single HTML page. This data is always up-to-date whenever you click the "refresh" button on the homepage.
 
 
 ![Mars Screenshot](https://github.com/Jackelyneg/web-scraping-challenge/blob/main/mars%20screenshot.PNG)
